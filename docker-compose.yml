@@ -7,13 +7,19 @@ networks:
 services:
   mysql:
     container_name: mysql
-    image: mysql:5.7
+    image: mysql:8.0.25
     environment:
       - MYSQL_ROOT_PASSWORD=password
     ports:
       - '3306:3306'
     volumes:
       - './mysql:/docker-entrypoint-initdb.d'
+
+  redis:
+    container_name: redis
+    image: redis:6.0.8
+    ports:
+      - '6379:6379'
 #  web:
 #    build:
 #      dockerfile: Dockerfile
