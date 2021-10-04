@@ -20,26 +20,3 @@ services:
     image: redis:6.0.8
     ports:
       - '6379:6379'
-#  web:
-#    build:
-#      dockerfile: Dockerfile
-#      context: ./
-#    container_name: web
-#    image: faraonc/rtrust-web:${WEB_TAG:-latest}
-#    environment:
-#      DB_HOST: "postgres"
-#    ports:
-#      - "8080:8080"
-#    depends_on:
-#      - postgres
-#
-#  postgres:
-#    container_name: postgres
-#    image: postgres:12.7-alpine
-#    volumes:
-#      - ./sql:/docker-entrypoint-initdb.d
-#    environment:
-#      POSTGRES_USER: "postgres"
-#      POSTGRES_PASSWORD: "password"
-#    ports:
-#      - "5432:5432"
